@@ -6,7 +6,7 @@ spring:
 
 ---
 server:
-  port: 8761
+  port: 6001
   #端口号
 spring:
   profiles: dev # 开发环境
@@ -27,7 +27,7 @@ eureka:
 
 ---
 server:
-  port: 8761 #端口号
+  port: 6001#端口号
 
 spring:
   profiles: prod # 生产环境
