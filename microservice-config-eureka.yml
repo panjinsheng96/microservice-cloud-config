@@ -6,7 +6,7 @@ spring:
 
 ---
 server:
-  port: 6001
+  port: 8761
   #端口号
 spring:
   profiles: dev # 开发环境
@@ -20,14 +20,15 @@ eureka:
       registerWithEureka: false
       fetchRegistry: false
       serviceUrl:
-        defaultZone: http://eureka6001.com:6001/eureka/
+        defaultZone: http://localhost:8761/eureka/
+        #http://eureka6001.com:6001/eureka/
 
     server:
       enable-self-preservation: false # 禁用自我保护机制*****************
 
 ---
 server:
-  port: 6001 #端口号
+  port: 8761 #端口号
 
 spring:
   profiles: prod # 生产环境
@@ -41,7 +42,8 @@ eureka:
     registerWithEureka: false
     fetchRegistry: false
     serviceUrl:
-      defaultZone: http://eureka6001.com:6001/eureka/
+      defaultZone: http://localhost:8761/eureka/
+#      http://eureka6001.com:6001/eureka/
 
   server:
     enable-self-preservation: true # 开启自我保护机制*****************
